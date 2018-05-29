@@ -1,0 +1,59 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Multiplayer Game</title>
+    <link rel="stylesheet" href="MultiGame.css">
+    <link href="../Content/bootstrap.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="navBar" src="NavBar.html"></div>
+    <h1>Multi Player Game</h1>
+    <br/>
+    <div class="container body-content col-md-4">
+        <div>
+            <div>
+                <label for="games">Games</label>
+                <select id="gameList"></select>
+                <br />
+                <button id="btnJoinGame">Join Game</button>
+            </div>
+        </div>
+        <h2>Strat New Game</h2>
+        <div>
+            <label for="mazeName">Name</label>
+            <div>
+                <input type="text" id="mazeName" />
+            </div>
+            <label for="mazeRows">Rows</label>
+            <div>
+                <input type="number" id="mazeRows" />
+            </div>
+            <label for="mazeCols">Cols</label>
+            <div>
+                <input type="number" id="mazeCols" />
+            </div>
+            <br />
+            <button id="btnStartGame">Start New Game</button>
+        </div>
+    </div>
+    <div>
+        <div class="loader" id="loader"></div>
+        <div class="col-md-4">
+            <canvas id="myMazeCanvas" width="300" height="300" style="border:2px black solid"></canvas>
+            <img id="myStartImg" src="OREN.png" style="display:none" />
+            <img id="myEndImg" src="TRUMP.jpg" style="display:none" />
+        </div>
+        <div class="col-md-4">
+            <canvas id="oppMazeCanvas" width="300" height="300" style="border:2px black solid"></canvas>
+            <img id="oppStartImg" src="OREN.png" style="display:none" />
+            <img id="oppEndImg" src="TRUMP.jpg" style="display:none" />
+        </div>
+    </div>
+    <script src="../Scripts/jquery-3.1.1.min.js"></script>
+    <script src="../Scripts/jquery.signalR-2.2.2.js"></script>
+    <script src="../signalr/hubs"></script>
+    <script src="../Scripts/MazeBoard.js"></script>
+    <script src="../Scripts/MultiGame.js"></script>
+</body>
+</html>

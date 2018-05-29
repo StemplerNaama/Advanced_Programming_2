@@ -1,0 +1,14 @@
+﻿<Window x:Class="GuiGame.EndGame"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GuiGame"
+        mc:Ignorable="d"
+        Title="EndGame" Height="200" Width="300">
+    <Grid>
+        <TextBlock Text="Mazal Tov!" FontWeight="Bold" FontSize="36" FontFamily="Showcard Gothic" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+        <TextBlock Text="You Won!" FontWeight="Bold" FontSize="36" FontFamily="Showcard Gothic" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <Button Name="continueBtn" Content="press here to continue" VerticalAlignment="Bottom" HorizontalAlignment="Center" Margin="0,0,0,10" Click="ContinueBtn_Click"/>
+    </Grid>
+</Window>
