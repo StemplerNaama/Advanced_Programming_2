@@ -1,0 +1,25 @@
+﻿<Window x:Class="GuiGame.SingleGame"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:Controls="clr-namespace:GuiGame"
+        mc:Ignorable="d"
+        Title="{Binding VM_MazeName}" Height="600" Width="600" KeyDown="Window_KeyDown" Closed="Window_Closed">
+    <DockPanel LastChildFill="False">
+            <DockPanel.Resources>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Margin" Value="10"/>
+                </Style>
+            </DockPanel.Resources>
+            <StackPanel Orientation="Horizontal" DockPanel.Dock="Top" HorizontalAlignment="Center">
+            <Button x:Name="restartMazeBtn" Content="Restart game" Width="90" Click="RestartMazeBtn_Click"/>
+            <Button x:Name="solveMazeBtn" Content="Solve maze" Width="90" Click="SolveMazeBtn_Click"/>
+            <Button x:Name="mainMenuBtn" Content="Main menu" Width="90" Click="MainMenuBtn_Click" />
+            </StackPanel>
+        <Controls:MazeBoardControl x:Name="mazeBoard" Margin="10" DockPanel.Dock="Bottom" MazeRows ="{Binding VM_MazeRows}" Grid.Row="1" MazeCols ="{Binding VM_MazeCols}" MazeString="{Binding VM_MazeString}" 
+                                   CurrentPos="{Binding VM_CurrentPos}" ExitImageFile="./TRUMP.jpg" PlayerImageFile="./OREN.png"
+                                   GoalPos="{Binding VM_GoalPos}"/>
+        </DockPanel>
+        
+</Window>

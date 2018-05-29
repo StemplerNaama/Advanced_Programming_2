@@ -1,0 +1,17 @@
+﻿<Window x:Class="GuiGame.SingleMenu"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:Controls="clr-namespace:GuiGame"
+        mc:Ignorable="d"
+        Title="SingleMenu" Height="300" Width="300">
+    <Grid HorizontalAlignment="Center" VerticalAlignment="Center">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Controls:GameDetails x:Name="gameDetails"/>
+        <Button x:Name="StartGameBtn" Grid.Row="1" Width="80" HorizontalContentAlignment="Center" HorizontalAlignment="Right" Click="StartGameBtn_Click" Height="20" Margin="0,0.4,29.8,-0.4">Start Game</Button>
+    </Grid>
+</Window>
